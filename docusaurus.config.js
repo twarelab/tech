@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'twareLAB doc',
+  tagline: 'tech, documents, materials',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -29,9 +29,13 @@ const config = {
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
+  // i18n: {
+  //   defaultLocale: 'en',
+  //   locales: ['en'],
+  // },
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'kr'],
   },
 
   presets: [
@@ -83,6 +87,9 @@ const config = {
             href: 'https://github.com/twarelab/tech',
             label: 'GitHub',
             position: 'right',
+          },
+          {
+            type: 'localeDropdown',
           },
         ],
       },
