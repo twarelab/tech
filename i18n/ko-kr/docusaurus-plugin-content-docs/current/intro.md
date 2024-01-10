@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# 힌글로 변하나...
+# Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+한글로 된 자료를 찾아봅시다.
 
 ## Getting Started
 

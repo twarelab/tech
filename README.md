@@ -39,3 +39,27 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+
+# 다국어 처리
+
+먼저,
+```
+$ yarn run write-translations -- --locale ko-kr
+```
+사용자 페이지 추가
+
+```
+# docs
+mkdir -p i18n/ko-kr/docusaurus-plugin-content-docs/current
+cp -r docs/** i18n/ko-kr/docusaurus-plugin-content-docs/current
+
+# blog
+mkdir -p i18n/ko-kr/docusaurus-plugin-content-blog
+cp -r blog/** i18n/ko-kr/docusaurus-plugin-content-blog
+
+# src/pages
+mkdir -p i18n/ko-kr/docusaurus-plugin-content-pages
+cp -r src/pages/**.md i18n/ko-kr/docusaurus-plugin-content-pages
+cp -r src/pages/**.mdx i18n/ko-kr/docusaurus-plugin-content-pages
+```
