@@ -4,85 +4,83 @@ sidebar_position: 2
 
 # Program FPGA
 
-Let's translate `docs/intro.md` to French.
+실제 Vivado 툴을 이용하여 bit파일을 다운로드 해보자.
 
-## Configure i18n
+## 프로젝트 다운로드
 
-Modify `docusaurus.config.js` to add support for the `fr` locale:
+먼저, 프로젝트 파일을 다운로드 한다.  
 
-```js title="docusaurus.config.js"
-export default {
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'fr'],
-  },
-};
-```
+### Visit GitHub
+주소는 다음과 같다.  
+> https://github.com/twarelab/apsm1_hdl
+![Code](image-20.png)
 
-## Translate a doc
+### Download
 
-Copy the `docs/intro.md` file to the `i18n/fr` folder:
+- “Download ZIP” 선택  
+![Zip Download](image-21.png)
 
-```bash
-mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
+- Save & Extract zip file
+![Save zip file](image-22.png)
 
-cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
-```
+## 프로젝트 열기
 
-Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md` in French.
+- 압축 푼 폴더의 .xpr 파일 더블클릭  
+![Open project](image-23.png)
 
-## Start your localized site
+- 로딩 성공
+![Open project vivado](image-24.png)
 
-Start your site on the French locale:
+## Program on FPGA
 
-```bash
-npm run start -- --locale fr
-```
+Program and Debug 선택해서 프로그래밍
 
-Your localized site is accessible at [http://localhost:3000/fr/](http://localhost:3000/fr/) and the `Getting Started` page is translated.
+- Open Hardware Manager
+![Alt text](image-25.png)
+- Open Target
+![Auto connect](image-26.png)
 
-:::caution
+- Connected Target device
+  - `xc7a100t_0` 는 FPGA
+  - `s25fl128x...` 은 Flash 
+![Connected target](image-27.png)
 
-In development, you can only use one locale at a time.
+- Program Device 선택
+![Program Device](image-28.png)
+- Select bit or bin file
+![Prgram popup](image-29.png)
+원하는 비트파일을 선택한다. 기본적으로는 아래 폴더에 생성된다.
+![select bit](image-30.png)
 
-:::
+Bit 파일을 선택하고 “OK”버튼을 누른다.
+![ok bit file](image-31.png)
 
-## Add a Locale Dropdown
+이제 "Program" 버튼을 누르면 끝
+![Program device end](image-32.png)
 
-To navigate seamlessly across languages, add a locale dropdown.
+## Program on Flash
 
-Modify the `docusaurus.config.js` file:
+- Flash 추가
+디바이스가 없으면 해당 디바이스를 추가해야 한다.  
+먼저 “Add Configuration Memory Device” 메뉴를 선택하면, 해당 FPGA가 나오는 팝업이 뜬다. 선택하고 클릭한다.  
+![add flash](image-33.png)
+ 
+해당 Flash를 검색해서 선택해서 추가한다.
+![Find Flash](image-34.png)
 
-```js title="docusaurus.config.js"
-export default {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'localeDropdown',
-        },
-        // highlight-end
-      ],
-    },
-  },
-};
-```
+바로 프로그램 할 것인지 묻는 팝업에서 “OK”를 누르면, 바로 프로그램이 가능하다.  
+![Direct program](image-35.png)
 
-The locale dropdown now appears in your navbar:
+- Flash program
+![Select flash and program](image-36.png)
 
-![Locale Dropdown](./img/localeDropdown.png)
+프로그램하는 설정 창은 다음과 같다.
+![Config program options](image-37.png)
 
-## Build your localized site
+이제 Erase & Program 과정이 수행된다.
+![Erase](image-38.png)
+![Program](image-39.png)
 
-Build your site for a specific locale:
-
-```bash
-npm run build -- --locale fr
-```
-
-Or build your site to include all the locales at once:
-
-```bash
-npm run build
-```
+## 완료
+모든 작업이 완료되면 다음과 같은 팝업창이 나타난다. "OK" 누르면 완료된다.
+![Complete](image-40.png)
