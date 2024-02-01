@@ -3,6 +3,7 @@ id: intro
 position: 1
 title: Introduction
 date: 2020-04-30
+slug: /
 ---
 
 # twareLAB 기술 문서
