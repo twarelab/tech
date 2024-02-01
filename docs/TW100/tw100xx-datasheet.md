@@ -33,16 +33,19 @@ sidebar_position: 2
 #### TW100MJ
 - RJ45 embedded (Ethernet Transformer inside)
 - 2.54 pitch pin header interface (42 pins)
+
 ![TW100MJ](./img/tw100mj-layout.png)
 #### TW100XR
 - Ethernet Transformer embedded
   + RJ45 is needed on the customer board
 - 2.54 pitch pin header interface (42 pins)
+
 ![TW100XR](./img/tw100xr-layout.png)
 #### TW100PC
 - Ethernet Transformer embedded
   + RJ45 is needed on the customer board
 - miniPCI interface (52 pins)
+
 ![TW100PC](./img/tw100pc-layout.png)
 ### Dimension
 #### TW100MJ
