@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.1.0">
 <title data-rh="true">TW100xx User Manual | twareLAB doc</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://tech.twarelab.com/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://tech.twarelab.com/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://tech.twarelab.com/TW100/tw100xx-user-manual"><meta data-rh="true" property="og:locale" content="ko_kr"><meta data-rh="true" name="docusaurus_locale" content="ko-kr"><meta data-rh="true" name="docsearch:language" content="ko-kr"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="TW100xx User Manual | twareLAB doc"><meta data-rh="true" name="description" content="이 문서는 TW100xx 시리즈 제품의 각종 기능에 대한 정보를 제공합니다."><meta data-rh="true" property="og:description" content="이 문서는 TW100xx 시리즈 제품의 각종 기능에 대한 정보를 제공합니다."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://tech.twarelab.com/TW100/tw100xx-user-manual"><link data-rh="true" rel="alternate" href="https://tech.twarelab.com/TW100/tw100xx-user-manual" hreflang="ko-kr"><link data-rh="true" rel="alternate" href="https://tech.twarelab.com/TW100/tw100xx-user-manual" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="twareLAB doc RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="twareLAB doc Atom Feed"><link rel="stylesheet" href="/assets/css/styles.169fb2fc.css">
-<script src="/assets/js/runtime~main.5afa42ba.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.6ce176cf.js" defer="defer"></script>
 <script src="/assets/js/main.4db0e1e6.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -40,7 +40,34 @@
 <img loading="lazy" alt="부팅시 디버그 메시지 화면" src="/assets/images/figure-1-4e837a494c3b903e35fbbddcaa87b1c2.png" width="960" height="1020" class="img_ev3q"></li>
 </ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="debug-port">Debug Port<a href="#debug-port" class="hash-link" aria-label="Debug Port에 대한 직접 링크" title="Debug Port에 대한 직접 링크">​</a></h4>
+<table><thead><tr><th style="text-align:center">Item</th><th style="text-align:center">Value</th></tr></thead><tbody><tr><td style="text-align:center">Baud Rate</td><td style="text-align:center">2Mbps</td></tr><tr><td style="text-align:center">Data Bit</td><td style="text-align:center">8 bits</td></tr><tr><td style="text-align:center">Stop Bit</td><td style="text-align:center">1 bit</td></tr><tr><td style="text-align:center">Parity</td><td style="text-align:center">None</td></tr><tr><td style="text-align:center">Flow Ctrl</td><td style="text-align:center">None</td></tr></tbody></table>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="factory-default-value">Factory Default Value<a href="#factory-default-value" class="hash-link" aria-label="Factory Default Value에 대한 직접 링크" title="Factory Default Value에 대한 직접 링크">​</a></h3>
+<p>| Category | Item                         || Specification |
+|:--------:|:-------------||:--------------|:--------------|
+|General Info| DHCP || Disable (Static IP) |
+|^| Local IP Address || 192.168.0.100 |
+|^| Local Subnet || 255.255.255.0 |
+|^| Local Gateway || 192.168.0.1 |
+|^| DNS Server IP || 168.126.63.1 |
+|^| HW Trigger || Enable |
+|^| SW Input || Enable |
+|Channel Info| Mode || Server Mode |
+|^| Connection Status || Disconnected |
+|^| DNS || Disable |
+|^| UDP || Disable |
+|^| Remote IP || 0.0.0.0 |
+|^| Local Port || 0 |
+|^| Remote Port || 0 |
+|^| Domain Name || NULL |
+|^| UART | Baud Rate | 115200 |
+|^| UART | Data Bit | 8 |
+|^| UART | Stop Bit | 1 |
+|^| UART | Parity | None |
+|^| UART | Flow Ctrl | None |
+|^| Data Packing Option | Char | Disble (0x00) |
+|^| Data Packing Option | Size | Disble (0) |
+|^| Data Packing Option | Time | Disble (0) |
+|^| Inactivity Time  || Disable (0) |</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="reset">Reset<a href="#reset" class="hash-link" aria-label="Reset에 대한 직접 링크" title="Reset에 대한 직접 링크">​</a></h3>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-reset">Hardware Reset<a href="#hardware-reset" class="hash-link" aria-label="Hardware Reset에 대한 직접 링크" title="Hardware Reset에 대한 직접 링크">​</a></h4>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="software-reset">Software Reset<a href="#software-reset" class="hash-link" aria-label="Software Reset에 대한 직접 링크" title="Software Reset에 대한 직접 링크">​</a></h4>
