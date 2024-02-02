@@ -42,7 +42,41 @@ TW100xx EVB를 테스트 하기위한 절차는 아래 순서를 따른다.
 ![부팅시 디버그 메시지 화면](./img/usermanual/figure-1.png)
 
 #### Debug Port
+| Item  | Value |
+|:-----:|:---------------:|
+|Baud Rate| 2Mbps |
+|Data Bit| 8 bits |
+|Stop Bit| 1 bit |
+|Parity| None |
+|Flow Ctrl| None |
 ### Factory Default Value
+| Category | Item                         || Specification |
+|:--------:|:-------------||:--------------|:--------------|
+|General Info| DHCP || Disable (Static IP) |
+|^| Local IP Address || 192.168.0.100 |
+|^| Local Subnet || 255.255.255.0 |
+|^| Local Gateway || 192.168.0.1 |
+|^| DNS Server IP || 168.126.63.1 |
+|^| HW Trigger || Enable |
+|^| SW Input || Enable |
+|Channel Info| Mode || Server Mode |
+|^| Connection Status || Disconnected |
+|^| DNS || Disable |
+|^| UDP || Disable |
+|^| Remote IP || 0.0.0.0 |
+|^| Local Port || 0 |
+|^| Remote Port || 0 |
+|^| Domain Name || NULL |
+|^| UART | Baud Rate | 115200 |
+|^| UART | Data Bit | 8 |
+|^| UART | Stop Bit | 1 |
+|^| UART | Parity | None |
+|^| UART | Flow Ctrl | None |
+|^| Data Packing Option | Char | Disble (0x00) |
+|^| Data Packing Option | Size | Disble (0) |
+|^| Data Packing Option | Time | Disble (0) |
+|^| Inactivity Time  || Disable (0) |
+
 ### Reset
 #### Hardware Reset
 #### Software Reset
