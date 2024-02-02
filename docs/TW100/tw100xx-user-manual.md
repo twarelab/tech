@@ -52,10 +52,10 @@ TW100xx EVB를 테스트 하기위한 절차는 아래 순서를 따른다.
 |Flow Ctrl| None |
 ### Factory Default Value
 ### General Info
-| Category | > | Item                         | Specification |
+| Category |      Item    | :::         | Specification |
 |:--------:|:-------------|:--------------|:--------------|
-|General Info| DHCP || Disable (Static IP) |
-| ^ | Local IP Address || 192.168.0.100 |
+|General Info| DHCP | ::: | Disable (Static IP) |
+| ^ | Local IP Address | ::: | 192.168.0.100 |
 | ^ | Local Subnet || 255.255.255.0 |
 | ^ | Local Gateway || 192.168.0.1 |
 |^| DNS Server IP || 168.126.63.1 |
