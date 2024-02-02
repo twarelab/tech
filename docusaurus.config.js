@@ -34,8 +34,8 @@ const config = {
   //   locales: ['en'],
   // },
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ko-kr',
+    locales: ['ko-kr'],
     // locales: ['en', 'ko-kr'],
   },
 
@@ -45,11 +45,11 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/', // Serve the docs at the site's root
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/twarelab/tech/edit/main/',
+          editUrl: 'https://github.com/twarelab/tech/edit/main/',
         },
         blog: {
           showReadingTime: true,
@@ -70,10 +70,23 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      announcementBar: {
+        id: 'support_us',
+        content:
+          '⭐️ 2024년 2월 1일 부터 새로운 가격 정책으로 제품 가격이 많이 내려갔어요!!⭐️',
+        backgroundColor: '#ffdd80',
+        textColor: '#0',
+        isCloseable: false,
+      },
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true,
+        },
+      },          
       navbar: {
-        title: 'My Site',
+        title: 'Docs',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Docs Logo',
           src: 'img/logo.png',
         },
         items: [
@@ -81,17 +94,18 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: '문서',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: '블로그', position: 'left'},
+          { href: "https://twareLAB.com/", label: "twareLAB Home", position: "right" },
           {
             href: 'https://github.com/twarelab/tech',
             label: 'GitHub',
             position: 'right',
           },
-          {
-            type: 'localeDropdown',
-          },
+          // {
+          //   type: 'localeDropdown',
+          // },
         ],
       },
       footer: {
@@ -102,7 +116,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/',
               },
             ],
           },

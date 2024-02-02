@@ -1,47 +1,57 @@
 ---
-sidebar_position: 1
+id: intro
+position: 1
+title: Introduction
+date: 2020-04-30
+slug: /
 ---
 
-# Tutorial Intro
+# twareLAB 기술 문서
 
-Let's discover **Docusaurus in less than 5 minutes**.
+여기는 twareLAB 제품에 대한 기술 문서들이 정리되어 있는 사이트 입니다. This site is an open information collection platform hosting information
+on twareLAB products and [Open Source - GitHub](https://github.com/twarelab).
+Please feel free to improve the content by registering an account. Your contributions would be greatly appreciated.
 
-## Getting Started
+**Most of the materials of Open Source Hardware are hosted on the
+🌎[twareLAB GitHub site](https://github.com/twareLAB)**
+![](/img/s2ebanner.jpg)
 
-Get started by **creating a new site**.
+## Overview
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+The ‘Serial to Ethernet’ (S2E) Products are the gateway that converts
+UART (TTL, RS-232 or RS-422/485) protocol into TCP/IP. It enables remote
+gauging, managing and control of TCP/IP devices through a UART serial
+interface.
 
-### What you'll need
+WIZnet S2E module supports a wide range of pin header types and hardware
+interfaces.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+-----
 
-## Generate a new site
+## Product Family
 
-Generate a new Docusaurus site using the **classic template**.
+|   | Image | UART | LAN Interface | Pin Header & Pitch | Operation Temp (℃) | Dimension (mm) | Evaluation Board |
+| --- | ----- | ---- | ------------- | ------------------ | ------------------- | -------------- | ---------------- |
+| [WIZ500SR-RP](TW100/TW100.md) |  | 1xTTL(3.3V) |Transformer|1x12<br />2.0mm<br />Pin Header  x 3ea|-20 ~ 85| 50mm x 30mm x 5.7mm | [WIZ500SR-RP-EVB](TW100/TW100.md) |
+| [WIZ505SR-RP](TW100/TW100.md) |  | 1xTTL(3.3V) |RJ-45|2x7<br />2.54mm<br />Pin Header<br />x 1ea|-20 ~ 85| 40mm x 66.5mm x 15mm | [WIZ505SR-RP-EVB](TW100/TW100.md) |
+-----
 
-The classic template will automatically be added to your project after you run the command:
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+### TW100
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+[Products Home](TW100/TW100.md) - A collection of product information
+including datasheets, source files, application notes and related
+application info.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+  - [TW100](TW100/TW100.md)
 
-## Start your site
+### EVB
 
-Run the development server:
+EVB 자료도 여기에 링크
 
-```bash
-cd my-website
-npm run start
-```
+### External Links
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+  - 🌎[twareLAB Official Website](http://twareLAB.com/)
+  - 🌎[twareLAB Github](https://github.com/twareLAB): Open source repository
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+-----
