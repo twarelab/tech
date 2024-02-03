@@ -144,3 +144,19 @@ HW_TRIGGER 핀 제어를 통해 AT Command 모드로 전환되면 UART1 포트�
 |:-------------|:--------------|
 | Command Mode 확인 | AT[CR][LF] |
 | 모듈 재부팅 | AT+REBOOT[CR][LF] |
+| Product ID 확인 | AT+PRODUCTID?[CR][LF] |
+| 펌웨어 버전 확인 | AT+VER?[CR][LF] |
+| MAC 주소 확인 | AT+MAC?[CR][LF] |
+| 등록상태 확인 | AT+REG?[CR][LF] |
+| 등록 요청 | AT+REG=<option>[CR][LF] |
+| 네트워크 정보 확인 | AT+DNETINFO?[CR][LF] |
+| 네트워크 정보 설정 | AT+DNETINFO=<ip mode>,<local ip>,<subnet>,<gateway>[CR][LF] |
+| DNS 서버 주소 확인 | AT+DNSIP?[CR][LF] |
+| DNS 서버 주소 설정 | AT+DNSIP=<dns server ip>[CR][LF] |
+| DNS Query 요청 | AT+DNSQUERY?<domain name>[CR][LF] |
+| NTP 서버 주소 확인 | AT+NTP?[CR][LF] |
+| NTP 서버 주소 설정 | AT+NTP=<ntp server url>[CR][LF] |
+| 현재 시간 확인 | AT+TIME?[CR][LF] |
+| Time Zone 확인 | AT+TZONE?[CR][LF] |
+| Time Zone 설정 | AT+TZONE=<time zone>[CR][LF] |
+| UART 정보 확인 | AT+UART?[CR][LF] |
