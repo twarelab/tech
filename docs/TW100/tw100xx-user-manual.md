@@ -168,124 +168,167 @@ HW_TRIGGER 핀 제어를 통해 AT Command 모드로 전환되면 UART1 포트�
 ### Command 모드 확인
 #### 명령
 *AT[CR][LF]*
+
 #### 응답
 *OK[CR][LF]*
+
 #### 예제
 
 ### 모듈 재부팅
 #### 명령
 *AT+REBOOT[CR][LF]*
+
 #### 응답
-*+REBOOT[CR][LF}*
+*+REBOOT[CR][LF]*
+
 *OK[CR][LF]*
+
 #### 예제
 
 ### Product ID 확인
 #### 명령
 *AT+PRODUCTID?[CR][LF]*
+
 #### 응답
 *+PRODUCTID=<productid>[CR][LF]*
+
 *OK[CR][LF]*
+
 #### 예제
 
 ### 펌웨어 버전 확인
 #### 명령
 *AT+VER?[CR][LF]*
+
 #### 응답
 *+VER=<version>[CR][LF]*
+
 *OK[CR][LF]*
+
 #### 예제
 
 ### MAC 주소 확인
 #### 명령
 *AT+MAC?[CR][LF]*
+
 #### 응답
 *+MAC=<mac addr>[CR][LF]*
+
 *OK[CR][LF]*
+
 #### 예제
 
 ### 등록 상태 확인
 #### 명령
 *AT+REG?[CR][LF]*
+
 #### 응답
 *+REG=<status>[CR][LF]*
+
 *OK[CR][LF]*
+
 
 ### 등록 요청
 #### 명령
 *AT+REG=<option>[CR][LF]*
+
 #### 응답
 *+REG=<option>[CR][LF]*
+
 *OK[CR][LF]*
+
 #### 예제
 
 ### 네트워크 정보 요청
 #### 명령
 *AT+DNETINFO?[CR][LF]*
+
 #### 응답
 *+DNETINFO=<ip mode>,<local ip>,<subnet>,<gateway>[CR][LF]*
+
 *OK[CR][LF]*
+
 #### 예제
 
 ### 네트워크 정보 설정
 #### 명령
 *AT+DNETINFO=<ip mode>,<local ip>,<subnet>,<gateway>[CR][LF]*
+
 #### 응답
 *+DNETINFO=<ip mode>,<local ip>,<subnet>,<gateway>[CR][LF]*
+
 *OK[CR][LF]*
+
 #### 예제
 
 ### DNS 서버 주소 확인
 #### 명령
 *AT+DNS?[CR][LF]*
+
 #### 응답
 *+DNS=<dns server ip>[CR][LF]*
+
 *OK[CR][LF]*
 
 ### DNS 서버 주소 설정
 #### 명령
 *AT+DNS=<dns server ip>[CR][LF]*
+
 #### 응답
 *+DNS=<dns server ip>[CR][LF]*
+
 *OK[CR][LF]*
 
 ### NTP 서버 주소 확인
 #### 명령
 *AT+NTP?[CR][LF]*
+
 #### 응답
 *+NTP=<ntp server domain>[CR][LF]*
+
 *OK[CR][LF]*
 
 ### NTP 서버 주소 설정
 #### 명령
 *AT+NTP=<ntp server domain>[CR][LF]*
+
 #### 응답
 *+NTP=<ntp server domain>[CR][LF]*
+
 *OK[CR][LF]*
 
 ### 현재 시간 확인
 #### 명령
 *AT+TIME?[CR][LF]*
+
 #### 응답
 *+TIME=YYYY/MM/DD/hh:mm:ss,<Day of Week>,<Time Zone>[CR][LF]*
+
 *OK[CR][LF]*
 
 ### Time Zone 설정
 #### 명령
 *AT+TZONE=<Time Zone>[CR][LF]*
+
 #### 응답
 *+TZONE=<Time Zone>[CR][LF]*
+
 *OK[CR][LF]*
 
 ### UART 정보 확인
 #### 명령
 *AT+UART?[CR][LF]*
+
 #### 응답
 *+UART=<uart num>,<uart1 setting>,...,<uartn setting>[CR][LF]*
+
 *OK[CR][LF]*
+
 ##### Uart Setting
 Uart setting은 개별 옵션을 0 ~ 9 사이의 숫자형 문자로 표현하고 옵션 간에는 Dash(‘-‘) 문자로 연결한다.
+
 옵션의 순서는 다음과 같다.
+
 <BaudRate>-<DataBit>-<StopBit>-<Parity>-<FlowCtrl>-<PackCH>-<PackSize>-<PackTime>-<InactivityTime>
 
 ###### BaudRate
@@ -356,18 +399,24 @@ Space(= 20), ‘+’ (= 32)
 ### UART 정보 설정
 #### 명령
 *AT+UART=<uart num>,<uart1 setting>,...,<uartn setting>[CR][LF]*
+
 #### 응답
 *+UART=<uart num>,<uart1 setting>,...,<uartn setting>[CR][LF]*
+
 *OK[CR][LF]*
 
 ### PEER 정보 확인
 #### 명령
 *AT+PEERINFO?[CR][LF]*
+
 #### 응답
 *+PEERINFO=<peer num>,<peer1 setting>,...,<peern setting>[CR][LF]*
+
 *OK[CR][LF]*
+
 ##### Peer Setting
 Peer setting은 개별 옵션을 0 ~ 9 사이의 숫자형 문자로 표현하고 옵션 간에는 Dash(‘-‘) 문자로 연결한다.
+
 <Operation Mode>-<Connection Status>-<bDNS>-<bUDP>-<Local Port>-<Remote IP>-<Remote Port>-<Remote Domain>
 
 ###### Operation Mode
