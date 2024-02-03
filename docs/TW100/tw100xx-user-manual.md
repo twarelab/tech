@@ -142,31 +142,4 @@ HW_TRIGGER 핀 제어를 통해 AT Command 모드로 전환되면 UART1 포트�
 
 |    Function    | Command Syntax |
 |:-------------|:--------------|
-| Command Mode 확인 | AT\r\n |
-| 모듈 재부팅 | AT+REBOOT\r\n |
-| Product ID 확인 | AT+PRODUCTID?\r\n |
-| 펌웨어 버전 확인 | AT+VER?\r\n |
-| MAC 주소 확인 | AT+MAC?\r\n |
-| 등록상태 확인 | AT+REG?\r\n |
-| 등록 요청 | AT+REG=<option>\r\n |
-| 네트워크 정보 확인 | AT+DNETINFO?\r\n |
-| 네트워크 정보 설정 | AT+DNETINFO=<ip mode>,<local ip>,<subnet>,<gateway>\r\n |
-| DNS 서버 주소 확인 | AT+DNSIP?\r\n |
-| DNS 서버 주소 설정 | AT+DNSIP=<dns server ip>\r\n |
-| DNS Query 요청 | AT+DNSQUERY?<domain name>\r\n |
-| NTP 서버 주소 확인 | AT+NTP?\r\n |
-| NTP 서버 주소 설정 | AT+NTP=<ntp server url>\r\n |
-| 현재 시간 확인 | AT+TIME?\r\n |
-| Time Zone 확인 | AT+TZONE?\r\n |
-| Time Zone 설정 | AT+TZONE=<time zone>\r\n |
-| UART 정보 확인 | AT+UART?\r\n |
-| UART 정보 설정 | AT+UART=<uart num>,<uart*1* setting>,...,<uart*n* setting>\r\n |
-| Peer 정보 확인 | AT+PEERINFO?\r\n |
-| Peer 정보 설정 | AT+PEERINFO=<peer num>,<peer*1* setting>,...,<peer*n* setting>\r\n |
-| FWUP Start | AT+FWUPSTART=<file size>\r\n |
-| FWUP Data | AT+FWUPDATA=<data>\r\n |
-| FWUP Finish | AT+FWUPFINISH\r\n |
-| SW INPUT 확인 | AT+SWINPUT?\r\n |
-| SW INPUT 설정 | AT+SWINPUT=<option>\r\n |
-| CRC16 사용 확인 | AT+USECRC16?\r\n |
-| CRC16 사용 확인 | AT+USECRC16=<option>\r\n |
+| Command Mode 확인 | AT[CR][LF] |
