@@ -62,31 +62,31 @@ TW100xx EVB를 테스트 하기위한 절차는 아래 순서를 따른다.
 | HW Trigger | Enable |
 | SW Input | Enable |
 ##### Channel Info
- |    Item    | Specification |
-|:-------------|:--------------|
-| Mode | Server Mode |
- | Connection Status | Disconnected |
- | DNS | Disable |
- | UDP | Disable |
- | Remote IP | 0.0.0.0 |
- | Local Port | 0 |
- | Remote Port | 0 |
- | Domain Name | NULL |
- | Inactivity Time  | Disable (0) |
- ###### UART 
- |    Item    | Specification |
-|:-------------|:--------------|
-| Baud Rate | 115200 |
- | Data Bit | 8 |
- | Stop Bit | 1 |
- | Parity | None |
- | Flow Ctrl | None |
- ###### Data Packing Option
 |    Item    | Specification |
 |:-------------|:--------------|
- | Char | Disble (0x00) |
- | Size | Disble (0) |
- | Time | Disble (0) |
+| Mode | Server Mode |
+| Connection Status | Disconnected |
+| DNS | Disable |
+| UDP | Disable |
+| Remote IP | 0.0.0.0 |
+| Local Port | 0 |
+| Remote Port | 0 |
+| Domain Name | NULL |
+| Inactivity Time  | Disable (0) |
+###### UART 
+|    Item    | Specification |
+|:-------------|:--------------|
+| Baud Rate | 115200 |
+| Data Bit | 8 |
+| Stop Bit | 1 |
+| Parity | None |
+| Flow Ctrl | None |
+###### Data Packing Option
+|    Item    | Specification |
+|:-------------|:--------------|
+| Char | Disble (0x00) |
+| Size | Disble (0) |
+| Time | Disble (0) |
 ### Reset
 모듈의 Reset에는 두 가지 방식이 있다.
 MCU의 NRST 핀과 연결된 /RESET 핀을 제어하는 Hardware Reset과 MCU의 GPIO에 연결된 SW_INPUT 핀을 제어하는 Software Reset이다.
