@@ -62,31 +62,31 @@ TW100xx EVB를 테스트 하기위한 절차는 아래 순서를 따른다.
 | HW Trigger | Enable |
 | SW Input | Enable |
 ##### Channel Info
-|    Item    | Specification |
+ |    Item    | Specification |
 |:-------------|:--------------|
 | Mode | Server Mode |
-| Connection Status | Disconnected |
-| DNS | Disable |
-| UDP | Disable |
-| Remote IP | 0.0.0.0 |
-| Local Port | 0 |
-| Remote Port | 0 |
-| Domain Name | NULL |
-| Inactivity Time  | Disable (0) |
-###### UART 
-|    Item    | Specification |
+ | Connection Status | Disconnected |
+ | DNS | Disable |
+ | UDP | Disable |
+ | Remote IP | 0.0.0.0 |
+ | Local Port | 0 |
+ | Remote Port | 0 |
+ | Domain Name | NULL |
+ | Inactivity Time  | Disable (0) |
+ ###### UART 
+ |    Item    | Specification |
 |:-------------|:--------------|
 | Baud Rate | 115200 |
-| Data Bit | 8 |
-| Stop Bit | 1 |
-| Parity | None |
-| Flow Ctrl | None |
-###### Data Packing Option
+ | Data Bit | 8 |
+ | Stop Bit | 1 |
+ | Parity | None |
+ | Flow Ctrl | None |
+ ###### Data Packing Option
 |    Item    | Specification |
 |:-------------|:--------------|
-| Char | Disble (0x00) |
-| Size | Disble (0) |
-| Time | Disble (0) |
+ | Char | Disble (0x00) |
+ | Size | Disble (0) |
+ | Time | Disble (0) |
 ### Reset
 모듈의 Reset에는 두 가지 방식이 있다.
 MCU의 NRST 핀과 연결된 /RESET 핀을 제어하는 Hardware Reset과 MCU의 GPIO에 연결된 SW_INPUT 핀을 제어하는 Software Reset이다.
@@ -135,7 +135,36 @@ Windows용과 Linux용 두 가지 버전이 있으며 Freeware로 제공한다.
 HW_TRIGGER 핀 제어를 통해 AT Command 모드로 전환되면 UART1 포트로 다음과 같은 AT Command를 전송해서 각종 설정 값을 조회하거나 설정을 변경할 수 있다.
 주의!) 모든 AT Command는 항상 마지막에 ‘\r\n’으로 끝나야 한다.
 
-
+|    Function    | Command Syntax |
+|:-------------|:--------------|
+| Command Mode 확인 | AT\r\n |
+| 모듈 재부팅 | AT+REBOOT\r\n |
+| Product ID 확인 | AT+PRODUCTID?\r\n |
+| 펌웨어 버전 확인 | AT+VER?\r\n |
+| MAC 주소 확인 | AT+MAC?\r\n |
+| 등록상태 확인 | AT+REG?\r\n |
+| 등록 요청 | AT+REG=<option>\r\n |
+| 네트워크 정보 확인 | AT+DNETINFO?\r\n |
+| 네트워크 정보 설정 | AT+DNETINFO=<ip mode>,<local ip>,<subnet>,<gateway>\r\n |
+| DNS 서버 주소 확인 | AT+DNSIP?\r\n |
+| DNS 서버 주소 설정 | AT+DNSIP=<dns server ip>\r\n |
+| DNS Query 요청 | AT+DNSQUERY?<domain name>\r\n |
+| NTP 서버 주소 확인 | AT+NTP?\r\n |
+| NTP 서버 주소 설정 | AT+NTP=<ntp server url>\r\n |
+| 현재 시간 확인 | AT+TIME?\r\n |
+| Time Zone 확인 | AT+TZONE?\r\n |
+| Time Zone 설정 | AT+TZONE=<time zone>\r\n |
+| UART 정보 확인 | AT+UART?\r\n |
+| UART 정보 설정 | AT+UART=<uart num>,<uart*1* setting>,...,<uart*n* setting>\r\n |
+| Peer 정보 확인 | AT+PEERINFO?\r\n |
+| Peer 정보 설정 | AT+PEERINFO=<peer num>,<peer*1* setting>,...,<peer*n* setting>\r\n |
+| FWUP Start | AT+FWUPSTART=<file size>\r\n |
+| FWUP Data | AT+FWUPDATA=<data>\r\n |
+| FWUP Finish | AT+FWUPFINISH\r\n |
+| SW INPUT 확인 | AT+SWINPUT?\r\n |
+| SW INPUT 설정 | AT+SWINPUT=<option>\r\n |
+| CRC16 사용 확인 | AT+USECRC16?\r\n |
+| CRC16 사용 확인 | AT+USECRC16=<option>\r\n |
 ### Command 모드 확인
 #### 명령
 *AT[CR][LF]*
