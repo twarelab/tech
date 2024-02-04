@@ -45,8 +45,7 @@ TCP/IP 통신을 위한 기본 정보인 IP Address, Subnet, Gateway IP address 
 |:-----:|:---------------|
 |Disable| Serial Command Mode를 사용하지 않는다는 옵션 |
 |HW Mode| HW_TRIGGER Pin의 상태값에 따라서 Serial Command Mode를 Enable/Disable할 수 있는 옵션.|
-|SW Mode| UART1번 포트로 미리 약속된 Character Set을 연속적으로 전송하면 Serial Command Mode로 진입하는 옵션. 
-펌웨어 버전 1.0.0에서는 지원하지 않는다. |
+|SW Mode| UART1번 포트로 미리 약속된 Character Set을 연속적으로 전송하면 Serial Command Mode로 진입하는 옵션. 펌웨어 버전 1.0.0에서는 지원하지 않는다. |
 
 #### Switch Input Setting Part
 #### Option Setting Part
