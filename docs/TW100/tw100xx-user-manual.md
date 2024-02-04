@@ -138,10 +138,16 @@ Windows용과 Linux용 두 가지 버전이 있으며 Freeware로 제공한다.
 
 ## AT Commands
 HW_TRIGGER 핀 제어를 통해 AT Command 모드로 전환되면 UART1 포트로 다음과 같은 AT Command를 전송해서 각종 설정 값을 조회하거나 설정을 변경할 수 있다.
-주의!) 모든 AT Command는 항상 마지막에 ‘\r\n’으로 끝나야 한다.
+주의!) 모든 AT Command는 항상 마지막에 ‘\r\n’([CR][LF])으로 끝나야 한다.
 
 |    Function    | Command Syntax |
 |:-------------|:--------------|
 | Command Mode 확인 | AT[CR][LF] |
 | 모듈 재부팅 | AT+REBOOT[CR][LF] |
 | Product ID 확인 | AT+PRODUCTID?[CR][LF] |
+| 펌웨어 버전 확인 | AT+VER?[CR][LF] |
+| MAC 주소 확인 | AT+MAC?[CR][LF] |
+| 등록상태 확인 | AT+REG?[CR][LF] |
+| 등록 요청 | AT+REG=<option>[CR][LF] |
+| 네트워크 정보 확인 | AT+DNETINFO?[CR][LF] |
+| 네트워크 정보 설정 | AT+DNETINFO=<ip mode>,<local ip>,<subnet>,<gateway>[CR][LF] |
