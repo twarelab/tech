@@ -170,3 +170,301 @@ HW_TRIGGER 핀 제어를 통해 AT Command 모드로 전환되면 UART1 포트�
 | SW INPUT 설정 | AT+SWINPUT=[option][CR][LF] |
 | CRC16 사용 확인 | AT+USECRC16?[CR][LF] |
 | CRC16 사용 확인 | AT+USECRC16=[option][CR][LF] |
+
+### Command 모드 확인
+#### 명령
+*AT[CR][LF]*
+
+#### 응답
+*OK[CR][LF]*
+
+#### 예제
+
+### 모듈 재부팅
+#### 명령
+*AT+REBOOT[CR][LF]*
+
+#### 응답
+*+REBOOT[CR][LF]*
+
+*OK[CR][LF]*
+
+#### 예제
+
+### Product ID 확인
+#### 명령
+*AT+PRODUCTID?[CR][LF]*
+
+#### 응답
+*+PRODUCTID=[productid][CR][LF]*
+
+*OK[CR][LF]*
+
+#### 예제
+
+### 펌웨어 버전 확인
+#### 명령
+*AT+VER?[CR][LF]*
+
+#### 응답
+*+VER=[version][CR][LF]*
+
+*OK[CR][LF]*
+
+#### 예제
+
+### MAC 주소 확인
+#### 명령
+*AT+MAC?[CR][LF]*
+
+#### 응답
+*+MAC=[mac addr][CR][LF]*
+
+*OK[CR][LF]*
+
+#### 예제
+
+### 등록 상태 확인
+#### 명령
+*AT+REG?[CR][LF]*
+
+#### 응답
+*+REG=[status][CR][LF]*
+
+*OK[CR][LF]*
+
+
+### 등록 요청
+#### 명령
+*AT+REG=[option][CR][LF]*
+
+#### 응답
+*+REG=[option][CR][LF]*
+
+*OK[CR][LF]*
+
+#### 예제
+
+### 네트워크 정보 요청
+#### 명령
+*AT+DNETINFO?[CR][LF]*
+
+#### 응답
+*+DNETINFO=[ip mode],[local ip],[subnet],[gateway][CR][LF]*
+
+*OK[CR][LF]*
+
+#### 예제
+
+### 네트워크 정보 설정
+#### 명령
+*AT+DNETINFO=[ip mode],[local ip],[subnet],[gateway][CR][LF]*
+
+#### 응답
+*+DNETINFO=[ip mode],[local ip],[subnet],[gateway][CR][LF]*
+
+*OK[CR][LF]*
+
+#### 예제
+
+### DNS 서버 주소 확인
+#### 명령
+*AT+DNS?[CR][LF]*
+
+#### 응답
+*+DNS=[dns server ip][CR][LF]*
+
+*OK[CR][LF]*
+
+### DNS 서버 주소 설정
+#### 명령
+*AT+DNS=[dns server ip][CR][LF]*
+
+#### 응답
+*+DNS=[dns server ip][CR][LF]*
+
+*OK[CR][LF]*
+
+### NTP 서버 주소 확인
+#### 명령
+*AT+NTP?[CR][LF]*
+
+#### 응답
+*+NTP=[ntp server domain][CR][LF]*
+
+*OK[CR][LF]*
+
+### NTP 서버 주소 설정
+#### 명령
+*AT+NTP=[ntp server domain][CR][LF]*
+
+#### 응답
+*+NTP=[ntp server domain][CR][LF]*
+
+*OK[CR][LF]*
+
+### 현재 시간 확인
+#### 명령
+*AT+TIME?[CR][LF]*
+
+#### 응답
+*+TIME=YYYY/MM/DD/hh:mm:ss,[Day of Week],[Time Zone][CR][LF]*
+
+*OK[CR][LF]*
+
+### Time Zone 설정
+#### 명령
+*AT+TZONE=[Time Zone][CR][LF]*
+
+#### 응답
+*+TZONE=[Time Zone][CR][LF]*
+
+*OK[CR][LF]*
+
+### UART 정보 확인
+#### 명령
+*AT+UART?[CR][LF]*
+
+#### 응답
+*+UART=[uart num],[uart1 setting],...,[uartn setting][CR][LF]*
+
+*OK[CR][LF]*
+
+##### Uart Setting
+Uart setting은 개별 옵션을 0 ~ 9 사이의 숫자형 문자로 표현하고 옵션 간에는 Dash(‘-‘) 문자로 연결한다.
+
+옵션의 순서는 다음과 같다.
+
+[BaudRate]-[DataBit]-[StopBit]-[Parity]-[FlowCtrl]-[PackCH]-[PackSize]-[PackTime]-[InactivityTime]
+
+###### BaudRate
+|    Baud Rate (bps)    | Value |
+|:-------------:|:--------------:|
+| 300 | 0 |
+| 600 | 1 |
+| 1,200 | 2 |
+| 2,400 | 3 |
+| 4,800 | 4 |
+| 9,600 | 5 |
+| 19,200 | 6 |
+| 38,400 | 7 |
+| 57,600 | 8 |
+| 115,200 | 9 |
+| 230,400 | 10 |
+| 460,800 | 11 |
+| 921,600 | 12 |
+| 1,000,000 | 13 |
+| 2,000,000 | 14 |
+| 3,000,000 | 15 |
+
+###### DataBit
+|    Data Bit    | Value |
+|:-------------:|:--------------:|
+| 7 (Not Supported Yet) | 0 |
+| 8 (Default) | 1 |
+
+###### StopBit
+|    Stop Bit    | Value |
+|:-------------:|:--------------:|
+| 0.5 (Not Supported Yet) | 0 |
+| 1 (Default) | 1 |
+| 1.5 (Not Supported Yet) | 2 |
+| 2 (Not Supported Yet) | 3 |
+
+###### Parity
+|    Parity    | Value |
+|:-------------:|:--------------:|
+| None | 0 |
+| ODD | 1 |
+| EVEN | 2 |
+
+###### FlowCtrl
+|   Flow Ctrl    | Value |
+|:-------------:|:--------------:|
+| None | 0 |
+| XON/XOFF | 1 |
+| RTS/CTS | 2 |
+| RTS ONLY | 3 |
+| Reverse RTS ONLY | 4 |
+
+###### PackCH
+문자를 Hex 값으로 표현한다.
+Space(= 20), ‘+’ (= 32)
+
+###### PackSize
+0 ~ 1000 사이의 값을 문자열로 지정할 수 있다.
+
+###### PackTime
+0 ~ 1000 사이의 값을 문자열로 지정할 수 있다.
+단위는 millisecond이다.
+
+###### InactivityTime
+0 ~ 3600 사이의 값을 문자열로 지정할 수 있다.
+단위는 second이다.
+
+### UART 정보 설정
+#### 명령
+*AT+UART=[uart num],[uart1 setting],...,[uartn setting][CR][LF]*
+
+#### 응답
+*+UART=[uart num],[uart1 setting],...,[uartn setting][CR][LF]*
+
+*OK[CR][LF]*
+
+### PEER 정보 확인
+#### 명령
+*AT+PEERINFO?[CR][LF]*
+
+#### 응답
+*+PEERINFO=[peer num],[peer1 setting],...,[peern setting][CR][LF]*
+
+*OK[CR][LF]*
+
+##### Peer Setting
+Peer setting은 개별 옵션을 0 ~ 9 사이의 숫자형 문자로 표현하고 옵션 간에는 Dash(‘-‘) 문자로 연결한다.
+
+[Operation Mode]-[Connection Status]-[bDNS]-[bUDP]-[Local Port]-[Remote IP]-[Remote Port]-[Remote Domain]
+
+###### Operation Mode
+|    Operation Mode   | Value |
+|:-------------:|:--------------:|
+| Server Mode | 0 |
+| Client Mode | 1 |
+
+###### Connection Status
+|    Connection Status    | Value |
+|:-------------:|:--------------:|
+| Disconnected | 0 |
+| Connected | 1 |
+
+###### bDNS
+|    DNS    | Value |
+|:-------------:|:--------------:|
+| Disable | 0 |
+| Enable | 1 |
+
+###### bUDP
+|    UDP   | Value |
+|:-------------:|:--------------:|
+| TCP Mode | 0 |
+| UDP Mode | 1 |
+
+###### Local Port
+0 ~ 65535 사이의 값을 문자열로 표현한다.
+
+###### Remote IP
+xxx.xxx.xxx.xxx 형식의 문자열로 표현한다.
+
+###### Remote Port
+0 ~ 65535 사이의 값을 문자열로 표현한다.
+
+###### Remote Domain
+문자열로 표현한다.
+Null 문자열 또는 Domain name을 지정한다.
+
+### PEER 정보 설정
+#### 명령
+*AT+PEERINFO=[peer num],[peer1 setting],...,[peern setting][CR][LF]*
+#### 응답
+*+PEERINFO=[peer num],[peer1 setting],...,[peern setting][CR][LF]*
+*OK[CR][LF]*
