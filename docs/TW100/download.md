@@ -5,7 +5,7 @@ sidebar_position: 5
 
 ## Binary
 
-![STD_1.2.0](./download_folder/TW100_STD_1.2.0_ConfigTool_947f80d4.zip)
+[STD_1.2.0](./download_folder/TW100_STD_1.2.0_ConfigTool_947f80d4.zip)
 
 ## Configuration Tool
 
