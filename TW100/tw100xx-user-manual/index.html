@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.1.0">
 <title data-rh="true">TW100xx User Manual | twareLAB doc</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://tech.twarelab.com/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://tech.twarelab.com/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://tech.twarelab.com/TW100/tw100xx-user-manual"><meta data-rh="true" property="og:locale" content="ko_kr"><meta data-rh="true" name="docusaurus_locale" content="ko-kr"><meta data-rh="true" name="docsearch:language" content="ko-kr"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="TW100xx User Manual | twareLAB doc"><meta data-rh="true" name="description" content="이 문서는 TW100xx 시리즈 제품의 각종 기능에 대한 정보를 제공합니다."><meta data-rh="true" property="og:description" content="이 문서는 TW100xx 시리즈 제품의 각종 기능에 대한 정보를 제공합니다."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://tech.twarelab.com/TW100/tw100xx-user-manual"><link data-rh="true" rel="alternate" href="https://tech.twarelab.com/TW100/tw100xx-user-manual" hreflang="ko-kr"><link data-rh="true" rel="alternate" href="https://tech.twarelab.com/TW100/tw100xx-user-manual" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="twareLAB doc RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="twareLAB doc Atom Feed"><link rel="stylesheet" href="/assets/css/styles.169fb2fc.css">
-<script src="/assets/js/runtime~main.23a7709e.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.aa35e759.js" defer="defer"></script>
 <script src="/assets/js/main.4db0e1e6.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -70,7 +70,7 @@ AT Command Set은 AT Commands를 참조하라.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="configuration-tool">Configuration Tool<a href="#configuration-tool" class="hash-link" aria-label="Configuration Tool에 대한 직접 링크" title="Configuration Tool에 대한 직접 링크">​</a></h2>
 <p>twareLAB Standard Configuration Tool은 twareLAB에서 공급하는 모듈을 설정하기 위해서 사용하는 PC Application이다.
 Windows용과 Linux용 두 가지 버전이 있으며 Freeware로 제공한다.
-아래 그림 4는 Configuration Tool을 실행했으면 표시되는 초기 화면의 모습이다.</p>
+아래 그림은 Configuration Tool을 실행했으면 표시되는 초기 화면의 모습이다.</p>
 <p><img loading="lazy" alt="부팅시 디버그 메시지 화면" src="/assets/images/figure-4-9a97ad4bd1ae1c729f949501519b3b86.png" width="1161" height="890" class="img_ev3q"></p>
 <p>디바이스 검색, 설정, 리셋, Factory Reset, 펌웨어 업데이트 기능을 수행할 수 있으며, 자세한 툴의 사용법은 “TW100XX Configuration Tool Manual”을 참고하라.
 아래 그림은 Device 검색 이후의 화면이다.</p>
@@ -183,7 +183,7 @@ Windows용과 Linux용 두 가지 버전이 있으며 Freeware로 제공한다.
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="uart-정보-확인">UART 정보 확인<a href="#uart-정보-확인" class="hash-link" aria-label="UART 정보 확인에 대한 직접 링크" title="UART 정보 확인에 대한 직접 링크">​</a></h3>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="명령-15">명령<a href="#명령-15" class="hash-link" aria-label="명령에 대한 직접 링크" title="명령에 대한 직접 링크">​</a></h4>
 <p><em>AT+UART?[CR][LF]</em></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="응답-15">응답<a href="#응답-15" class="hash-link" aria-label="응답에 대한 직접 링크" title="응답에 대한 직접 링크">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="응답-15"> 응답<a href="#응답-15" class="hash-link" aria-label="응답에 대한 직접 링크" title="응답에 대한 직접 링크">​</a></h4>
 <p><em>+UART=[uart num],[uart1 setting],...,[uartn setting][CR][LF]</em></p>
 <p><em>OK[CR][LF]</em></p>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="uart-setting">Uart Setting<a href="#uart-setting" class="hash-link" aria-label="Uart Setting에 대한 직접 링크" title="Uart Setting에 대한 직접 링크">​</a></h5>
@@ -339,6 +339,7 @@ RXD/TXD/RTS/CTS 4개 핀이 연결되어 있다.</p>
 <p>각 단자 내부에 있는 Header Socket에 Serial Converter Modules를 장착해서 RS232/RS485/RS422 신호 레벨로 전환할 수 있다.
 Serial Converter Modules 모듈을 장착해서 신호 레벨을 변환하기 위해서는 각 Header Socket 사이에 있는 Shunter를 제거하고 적합한 Protocol Converter 모듈을 헤더 소켓에 장착한다.
 아래 표는 Serial Converter Modules 모듈 사용 유무에 따라 각 핀이 어떤 신호를 나타내는 지를 표시한다.</p>
+<table><thead><tr><th style="text-align:center">실크 표시</th><th style="text-align:center">3.3V TTL</th><th style="text-align:center">RS232</th><th style="text-align:center">RS485</th><th style="text-align:center">RS422</th></tr></thead><tbody><tr><td style="text-align:center">CTS</td><td style="text-align:center">CTS</td><td style="text-align:center">CTS(232 Level)</td><td style="text-align:center">NC</td><td style="text-align:center">TX+</td></tr><tr><td style="text-align:center">RTS</td><td style="text-align:center">RTS</td><td style="text-align:center">RTS(232 Level)</td><td style="text-align:center">NC</td><td style="text-align:center">TX-</td></tr><tr><td style="text-align:center">RXD</td><td style="text-align:center">RXD</td><td style="text-align:center">RXD(232 Level)</td><td style="text-align:center">485+</td><td style="text-align:center">RX+</td></tr><tr><td style="text-align:center">TXD</td><td style="text-align:center">TXD</td><td style="text-align:center">TXD(232 Level)</td><td style="text-align:center">485-</td><td style="text-align:center">RX-</td></tr></tbody></table>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="can--spi-terminal-block">CAN &amp; SPI Terminal Block<a href="#can--spi-terminal-block" class="hash-link" aria-label="CAN &amp; SPI Terminal Block에 대한 직접 링크" title="CAN &amp; SPI Terminal Block에 대한 직접 링크">​</a></h4>
 <p>CAN 및 SPI 터미널 단자는 CAN 통신이나 SPI 통신을 위한 신호선을 연결하기 위한 단자로 추후 지원 예정이다.</p>
 <p><img loading="lazy" alt="부팅시 디버그 메시지 화면" src="/assets/images/figure-23-e9164235ce603423cdff244620ab93d1.png" width="418" height="352" class="img_ev3q"></p>
