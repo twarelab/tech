@@ -138,7 +138,9 @@ Windows용과 Linux용 두 가지 버전이 있으며 Freeware로 제공한다.
 
 ## AT Commands
 HW_TRIGGER 핀 제어를 통해 AT Command 모드로 전환되면 UART1 포트로 다음과 같은 AT Command를 전송해서 각종 설정 값을 조회하거나 설정을 변경할 수 있다.
-주의!) 모든 AT Command는 항상 마지막에 ‘\r\n’([CR][LF])으로 끝나야 한다.
+:::caution
+모든 AT Command는 항상 마지막에 ‘\r\n’([CR][LF])으로 끝나야 한다.
+:::
 
 |    Function    | Command Syntax |
 |:-------------|:--------------|
