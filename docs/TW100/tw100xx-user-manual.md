@@ -150,4 +150,4 @@ HW_TRIGGER 핀 제어를 통해 AT Command 모드로 전환되면 UART1 포트�
 | 등록상태 확인 | AT+REG?[CR][LF] |
 | 등록 요청 | AT+REG=<option>[CR][LF] |
 | 네트워크 정보 확인 | AT+DNETINFO?[CR][LF] |
-| 네트워크 정보 설정 | AT+DNETINFO=<ip mode>,<local ip>,<subnet>,<gateway>[CR][LF] |
+
