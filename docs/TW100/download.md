@@ -3,7 +3,19 @@ sidebar_position: 5
 ---
 # twareLAB Download
 
-## Binary
+## PDF Documents
+### Datasheet
+- [Datasheet Rev1.2 Downlaod](./download_folder/TW100xx%20Datasheet-Rev1.2.pdf)
+
+### User Manual
+- [User Manual Rev1.0 Downlaod(KOR)](./download_folder/TW100xx%20User%20Manual-Rev1.0.pdf)
+- [User Manual Rev1.0 Downlaod(ENG)](./download_folder/TW100xx%20User%20Manual_Rev1.0.eng.pdf)
+
+### Configuration Tool Manual
+- [ConfigTool Manual Rev1.0 Downlaod(KOR)](./download_folder/TW100xx_Configuraion_Tool_Manual-Rev1.0.pdf)
+- [ConfigTool Manual Rev1.0 Downlaod(ENG)](./download_folder/TW100xx_Configuraion_Tool_Manual-Rev1.0.eng.pdf)
+
+## Firmware Binary
 ### Standard Version 1.2.0
 - Serial Data Corruption fixed
 
