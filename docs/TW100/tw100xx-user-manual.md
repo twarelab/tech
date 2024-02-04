@@ -119,7 +119,7 @@ AT Command Set은 AT Commands를 참조하라.
 
 twareLAB Standard Configuration Tool은 twareLAB에서 공급하는 모듈을 설정하기 위해서 사용하는 PC Application이다. 
 Windows용과 Linux용 두 가지 버전이 있으며 Freeware로 제공한다.
-아래 그림 4는 Configuration Tool을 실행했으면 표시되는 초기 화면의 모습이다.
+아래 그림은 Configuration Tool을 실행했으면 표시되는 초기 화면의 모습이다.
 
 ![부팅시 디버그 메시지 화면](./img/usermanual/figure-4.png)
 
@@ -582,6 +582,13 @@ RXD/TXD/RTS/CTS 4개 핀이 연결되어 있다.
 각 단자 내부에 있는 Header Socket에 Serial Converter Modules를 장착해서 RS232/RS485/RS422 신호 레벨로 전환할 수 있다.
 Serial Converter Modules 모듈을 장착해서 신호 레벨을 변환하기 위해서는 각 Header Socket 사이에 있는 Shunter를 제거하고 적합한 Protocol Converter 모듈을 헤더 소켓에 장착한다.
 아래 표는 Serial Converter Modules 모듈 사용 유무에 따라 각 핀이 어떤 신호를 나타내는 지를 표시한다.
+
+|   실크 표시    | 3.3V TTL       | RS232          | RS485          | RS422          |
+|:-------------:|:--------------:|:--------------:|:--------------:|:--------------:|
+| CTS           | CTS            | CTS(232 Level) | NC             | TX+            |
+| RTS           | RTS            | RTS(232 Level) | NC             | TX-            |
+| RXD           | RXD            | RXD(232 Level) | 485+           | RX+            |
+| TXD           | TXD            | TXD(232 Level) | 485-           | RX-            |
 
 #### CAN & SPI Terminal Block
 
