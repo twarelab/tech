@@ -14,7 +14,7 @@ sidebar_position: 3
 - Support Time Zone Setting
 - TCP/UDP Data Communication
 - Ethernet Data Packing Option
-- Support Up to 3Mbps UART Baud Rate
+- Support Up to *2*Mbps UART Baud Rate
 ### Product Specifications
 | Item  | Specification |
 |:-----:|:---------------|

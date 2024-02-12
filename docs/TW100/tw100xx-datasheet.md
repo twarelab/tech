@@ -13,7 +13,7 @@ sidebar_position: 2
 - Support NTP Time Query
 - TCP/UDP Data Communication
 - Support Ethernet Data Packing Options
-- Support Up to 3Mbps UART Baud Rate
+- Support Up to *2*Mbps UART Baud Rate
 ### Product Specification
 | Item  | Specification |
 |:-----:|:---------------|

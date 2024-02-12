@@ -18,8 +18,9 @@ sidebar_position: 5
 ## Firmware Binary
 ### Standard Version 1.2.0
 - Serial Data Corruption fixed
+- AT Command Buf fixed
 
-[STD_1.2.0 Downlaod](./download_folder/TW100_STD_1.2.0_ConfigTool_947f80d4.zip)
+[STD_1.2.0 Downlaod](./download_folder/TW100_STD_1.2.0_ConfigTool_676f3e63.zip)
 
 ## Configuration Tool
 ### Verion 1.1.7d
