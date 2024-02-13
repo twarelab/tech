@@ -28,3 +28,11 @@ sidebar_position: 5
 - Test version. 
 
 [Config Tool Ver1.1.7d Download](./download_folder/twarelab_config_1.1.7d.zip)
+
+## Test Tool
+### Data Integrity Test Tool
+- 4CH UART-to-Ethernet Data Integrity Test
+- UART Baud Rate Selectable
+- Serial Data Length Selectable
+
+[S2ETester Download](./download_folder/twareLAB_S2E_Tester.zip)
