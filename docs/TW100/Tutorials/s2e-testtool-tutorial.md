@@ -36,7 +36,7 @@ TW100xx 시리즈의 모듈은 기본적으로 Serial 4채널과 Ethernet 기반
 Test Tool에게 시리얼 포트를 제공하기 위해서는 USB-to-Serial 동글이 필요하다.
 4개의 Serial 포트가 필요하기 때문에 1 포트 동글 4개 또는 4개 시리얼 포트를 제공하는 모듈이 필요하다.
 
-### TW100xx 모듈 설정
+### 1. TW100xx 모듈 설정
 먼저 twareLAB Config Tool을 이용해서 테스트할 모듈에 대한 설정을 수행한다.
 이때 중요한 내용은 다음과 같다.
 1. 각 Serial Port의 Baud Rate, Flow Control 등 시리얼 설정
@@ -46,16 +46,17 @@ Test Tool에게 시리얼 포트를 제공하기 위해서는 USB-to-Serial 동�
 ![설정툴 설정값](../img/tutorial/configtool-basic-setting.png)
 
 #### Serial Port 설정값
-Baud Rate는 2M bps로 지정하고, 나머지는 Default 값으로 둔다.
+- Baud Rate는 2M bps로 지정하고, 나머지는 Default 값으로 둔다.
 
 #### TCP Socket 설정값
-Channel 1번부터 Port 번호는 5001 ~ 5004를 지정한다.
+- Channel 1번부터 Port 번호는 5001 ~ 5004를 지정한다.
 
 #### 데이터 패킹 옵션
-Size Option은 512(bytes), Time Option은 10(ms)를 지정한다.
+- Size Option은 512(bytes), Time Option은 10(ms)를 지정한다.
+
 이것은 시리얼에서 올라오는 데이터가 512 바이트 되면 그 단위로 이더넷 패킷을 만들어서 Peer 장치로 전송한다는 의미이며, 512 바이트가 수신되지 않았더라도 시리얼 수신이 10ms 동안 없으면 그때까지 수신된 데이터를 하나의 패킷으로 만들어서 전송한다는 의미이다.
 
-### Serial Port 설정
+### 2. Test Tool에서 Serial Port 설정
 USB-to-Serial 동글이 PC에서 어떤 Comport 장치로 인식되었는 지를 확인해서 해당 포트를 열어주어야 한다.
 
 Comport가 어떻게 인식되었는지는 "장치관리자"에서 확인할 수 있다.
@@ -66,8 +67,32 @@ S2E Test Tool에서 시리얼 설정 지정은 다음과 같이 한다.
 
 ![테스트 툴 시리얼 설정](../img/tutorial/s2etesttool-serial-setting.png)
 
-### TCP Port 설정
+### 3. Test Tool에서 TCP Port 설정
 twareLAB Config Tool에서 설정한 장치의 IP 주소와 각 포트 넘버를 이용해서 접속 정보를 지정한다.
 여기서 장치의 IP는 "192.168.0.100"이고 포트 넘버는 채널 1번부터 5001 ~ 5004가 된다.
 
 ![테스트 툴 TCP socket 설정](../img/tutorial/s2etesttool-tcp-setting.png)
+
+### 4. Test Tool에서 Retry Count 설정
+
+![Retry Count 지정](../img/tutorial/s2etesttool-retrycount-setting.png)
+
+### 5. Test Tool에서 "File to send" 파일 지정
+
+![File to send 지정](../img/tutorial/s2etesttool-filetosend-setting.png)
+
+### 6. Test Tool에서 request interval 지정
+
+![request interval 지정](../img/tutorial/s2etesttool-interval-setting.png)
+
+### 7. Test Tool에서 "Serial Change" 버튼 클릭
+
+![Serial Change 버튼 클릭](../img/tutorial/s2etesttool-serialchange-click.png)
+
+### 8. Test Tool에서 "Start Test" 버튼 클릭
+
+![Start Test 버튼 클릭](../img/tutorial/s2etesttool-starttest-click.png)
+
+### 9. Test Tool에서 송수신 Test 결과 확인
+
+![Test 결과 확인](../img/tutorial/s2etesttool-test-result.png)
