@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.1.0">
 <title data-rh="true">S2E Test Tool Tutorial | twareLAB doc</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://tech.twarelab.com/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://tech.twarelab.com/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://tech.twarelab.com/TW100/Tutorials/s2e-testtool-tutorial"><meta data-rh="true" property="og:locale" content="ko_kr"><meta data-rh="true" name="docusaurus_locale" content="ko-kr"><meta data-rh="true" name="docsearch:language" content="ko-kr"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="S2E Test Tool Tutorial | twareLAB doc"><meta data-rh="true" name="description" content="티웨어랩의 멀티채널 Serial-to-Ethernet 모듈의 기능 검증용 소프트웨어 사용법을 소개한다."><meta data-rh="true" property="og:description" content="티웨어랩의 멀티채널 Serial-to-Ethernet 모듈의 기능 검증용 소프트웨어 사용법을 소개한다."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://tech.twarelab.com/TW100/Tutorials/s2e-testtool-tutorial"><link data-rh="true" rel="alternate" href="https://tech.twarelab.com/TW100/Tutorials/s2e-testtool-tutorial" hreflang="ko-kr"><link data-rh="true" rel="alternate" href="https://tech.twarelab.com/TW100/Tutorials/s2e-testtool-tutorial" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="twareLAB doc RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="twareLAB doc Atom Feed"><link rel="stylesheet" href="/assets/css/styles.169fb2fc.css">
-<script src="/assets/js/runtime~main.cd42bcb6.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.6ea8b9fd.js" defer="defer"></script>
 <script src="/assets/js/main.7e410720.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -16,11 +16,12 @@
 <p>TW100xx 시리즈의 모듈은 기본적으로 Serial 4채널과 Ethernet 기반 TCP/UDP Socket 4개간의 데이터 교환을 제공한다.
 따라서 모듈의 기능을 Fully 테스트 하기 위해서는 모듈과 통신하기 위한 4개의 Serial Task와 4개의 Ethernet Socket Task를 처리하는 소프트웨어 툴이 필요하다.</p>
 <p>다양한 업체에서 제공되는 상용 툴을 이용할 수 도 있지만 TW100xx 시리즈 모듈 검중용으로 전용 소프트웨어가 필요해서 고객용으로 제공한다.</p>
+<p><a href="/TW100/download#test-tool">Test Tool 다운로드 주소</a></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="동작-시나리오">동작 시나리오<a href="#동작-시나리오" class="hash-link" aria-label="동작 시나리오에 대한 직접 링크" title="동작 시나리오에 대한 직접 링크">​</a></h2>
 <ul>
 <li>
 <p>S2E Test Tool은 지정된 Peer IP 주소와 Port 번호로 접속을 한 후, 접속이 되면 데이터 요청 메시지를 전송한다. 여기서는 &quot;?\r\n&quot;를 전송한다.
-이 데이터는 TW100xx의 TCP Socket으로 전달되  고 해당 데이터는 시리얼 포트를 통해서 모듈에 연결된 시리얼 장치(USB-to-Serial 동글)로 전달된다.</p>
+이 데이터는 TW100xx의 TCP Socket으로 전달되고 해당 데이터는 시리얼 포트를 통해서 모듈에 연결된 시리얼 장치(USB-to-Serial 동글)로 전달된다.</p>
 </li>
 <li>
 <p>S2E Test Tool의 Serial Task는 &quot;?\r\n&quot; 데이터를 수신하면 지정된 파일내의 데이터를 읽어서 시리얼로 전달한다.</p>
@@ -38,7 +39,7 @@
 <p><img loading="lazy" alt="테스트 환경 구성도" src="/assets/images/s2etester_config-ef79734bba98967f2c3f2744073a2c0e.png" width="1387" height="706" class="img_ev3q"></p>
 <p>Test Tool에게 시리얼 포트를 제공하기 위해서는 USB-to-Serial 동글이 필요하다.
 4개의 Serial 포트가 필요하기 때문에 1 포트 동글 4개 또는 4개 시리얼 포트를 제공하는 모듈이 필요하다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-tw100xx-모듈-설정">1. TW100xx 모듈 설정<a href="#1-tw100xx-모듈-설정" class="hash-link" aria-label="1. TW100xx 모듈 설정에 대한 직접 링크" title="1. TW100xx 모듈 설정에 대한 직접 링 크">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-tw100xx-모듈-설정">1. TW100xx 모듈 설정<a href="#1-tw100xx-모듈-설정" class="hash-link" aria-label="1. TW100xx 모듈 설정에 대한 직접 링크" title="1. TW100xx 모듈 설정에 대한 직접 링크">​</a></h3>
 <p>먼저 twareLAB Config Tool을 이용해서 테스트할 모듈에 대한 설정을 수행한다.
 이때 중요한 내용은 다음과 같다.</p>
 <ol>
@@ -59,7 +60,7 @@
 <ul>
 <li>Size Option은 512(bytes), Time Option은 10(ms)를 지정한다.</li>
 </ul>
-<p>이것은 시리얼에서 올라오는 데이터가 512 바이트 되면 그 단위로 이더넷 패킷을 만들어서 Peer 장치로 전송한다는 의미이며, 512 바이트가 수신되지 않았더라도 시리얼 수신이 10ms 동안 없으면 그때까지 수신된 데이터를 하나의 패킷으로 만들어서 전송한  다는 의미이다.</p>
+<p>이것은 시리얼에서 올라오는 데이터가 512 바이트 되면 그 단위로 이더넷 패킷을 만들어서 Peer 장치로 전송한다는 의미이며, 512 바이트가 수신되지 않았더라도 시리얼 수신이 10ms 동안 없으면 그때까지 수신된 데이터를 하나의 패킷으로 만들어서 전송한다는 의미이다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-test-tool에서-serial-port-설정">2. Test Tool에서 Serial Port 설정<a href="#2-test-tool에서-serial-port-설정" class="hash-link" aria-label="2. Test Tool에서 Serial Port 설정에 대한 직접 링크" title="2. Test Tool에서 Serial Port 설정에 대한 직접 링크">​</a></h3>
 <p>USB-to-Serial 동글이 PC에서 어떤 Comport 장치로 인식되었는 지를 확인해서 해당 포트를 열어주어야 한다.</p>
 <p>Comport가 어떻게 인식되었는지는 &quot;장치관리자&quot;에서 확인할 수 있다.</p>
