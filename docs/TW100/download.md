@@ -22,6 +22,11 @@ sidebar_position: 5
 
 [STD_1.2.0 Downlaod](./download_folder/TW100_STD_1.2.0_ConfigTool_676f3e63.zip)
 
+### Standard Version 1.2.1
+- RXD noise issue fixed(RXD Internal Pull-up)
+
+[STD_1.2.1 Download](./download_folder/TW100_STD_1.2.1_ConfigTool_dcbbabfd.zip)
+
 ## Configuration Tool
 ### Verion 1.1.7d
 - Network Interface Card List 추가
