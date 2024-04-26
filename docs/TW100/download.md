@@ -24,8 +24,9 @@ sidebar_position: 5
 
 ### Standard Version 1.2.1
 - RXD noise issue fixed(RXD Internal Pull-up)
+- Version Fixed (1.2.0 => 1.2.1)
 
-[STD_1.2.1 Downlaod](./download_folder/TW100_STD_1.2.1_ConfigTool_dcbbabfd.zip)
+[STD_1.2.1 Downlaod](./download_folder/TW100_STD_1.2.1_ConfigTool_3448ef1d.zip)
 
 ## Configuration Tool
 ### Verion 1.1.7d
