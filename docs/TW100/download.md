@@ -31,9 +31,15 @@ sidebar_position: 5
 [STD_1.2.1 Downlaod](./download_folder/TW100_STD_1.2.1_ConfigTool_3448ef1d.zip)
 
 ### TW101DB 1CH S2E Firmware
-- First Relase
+#### Standard Version 3.0.0 First Relase
 
 [TW101DB STD_3.0.0 Downlaod](./download_folder/TW101DB_V3.0.0_ConfigTool_97e675a5.zip)
+
+#### Standard Version 3.0.1 
+- CLOSE_WAIT 상태 수신 Data 처리 추가
+
+[TW101DB STD_3.0.1 Downlaod](./download_folder/TW101DB_V3.0.1_ConfigTool_5a739e93.zip)
+
 
 ## Configuration Tool
 ### Verion 1.1.7d
